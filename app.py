@@ -1,10 +1,10 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-import tensorflow as tf
+from keras.models import load_model
 
 # Load model
-model = tf.keras.models.load_model("blood_model.h5")
+model = load_model("blood_model.h5")
 class_names = ['A+', 'A-', 'AB+', 'AB-', 'B+', 'B-', 'O+', 'O-']
 
 st.title("🩸 Blood Group Detection")
